@@ -1,0 +1,26 @@
+<div class="login">
+  <h1>Login Check</h1>
+  <form #login="ngForm" (ngSubmit)="submit(login)">
+    <input
+      #email="ngModel"
+      required
+      name="email"
+      type="email"
+      placeholder="Email"
+      ngModel
+    />
+    <p *ngIf="email.touched && email.invalid" class="alert">Email Requierd</p>
+    <input
+      #password="ngModel"
+      required
+      name="password"
+      type="password"
+      placeholder="Password"
+      ngModel
+    />
+    <p *ngIf="password.touched && password.invalid" class="alert">
+      Password Requierd
+    </p>
+    <input type="submit" value="Login" />
+  </form>
+</div>
