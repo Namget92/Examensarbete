@@ -1,0 +1,17 @@
+.pageDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 4rem;
+}
+.ulChecklist {
+  padding: 0;
+  list-style-type: none;
+}
+.innerBox {
+  border: 0.2rem solid #ff5558;
+
+  border-radius: 10px;
+  opacity: 95%;
+  margin: 0.5rem;
+}

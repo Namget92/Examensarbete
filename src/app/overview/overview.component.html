@@ -1,1 +1,17 @@
-<p>overview works!</p>
+<div class="pageDiv">
+  <img
+    class="logo"
+    src="../../assets/checklist-384-454891.webp"
+    alt="pic of a checklist"
+  />
+  <h2>Checklist Number 1</h2>
+  <ul class="ulChecklist">
+    <li *ngFor="let items of checklistItems">
+      <div class="innerBox">
+        <p>{{ items.id }}</p>
+        <p>{{ items.task }}}</p>
+        <p *ngIf="items.done">✅</p>
+      </div>
+    </li>
+  </ul>
+</div>
