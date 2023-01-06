@@ -7,11 +7,21 @@
   <h2>Checklist Number 1</h2>
   <ul class="ulChecklist">
     <li *ngFor="let items of checklistItems">
-      <div class="innerBox">
-        <p>{{ items.id }}</p>
+      <div class="outerBox">
+        <div class="innerBox">
+          <p>Step {{ items.id }}</p>
+          <input type="checkbox" class="doneCheckbox" />
+          <br />
+        </div>
+
         <p>{{ items.task }}}</p>
-        <p *ngIf="items.done">✅</p>
       </div>
     </li>
   </ul>
 </div>
+
+<!-- 
+  Bara det aktiva steget ska synas tydligt.
+  Kanske sänka Opacity om den inte är aktuell just nu.
+  Dom avklarade kanske ska ha en annan styling som är annorlunda än dom ej avklarade tasksen.
+ -->
