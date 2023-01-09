@@ -6,17 +6,34 @@
   />
   <h2>Checklist Number 1</h2>
   <ul class="ulChecklist">
-    <li *ngFor="let items of checklistItems">
-      <div class="outerBox">
-        <div class="innerBox">
+    <!-- <li *ngFor="let items of checklistItems">
+      <div *ngIf="items.done" class="outerBox">
+        <div class="innerBox done">
           <p>Step {{ items.id }}</p>
-          <input type="checkbox" class="doneCheckbox" />
+          <br />
+          <button class="undoneBtn">Undone</button>
+        </div>
+
+        <p class="doneText">{{ items.task }}}</p>
+      </div>
+      <div *ngIf="items.active" class="outerBox">
+        <div class="innerBox active">
+          <p>Step {{ items.id }}</p>
+          <button class="doneBtn">Done</button>
           <br />
         </div>
 
+        <p class="activeText">{{ items.task }}}</p>
+      </div>
+
+      <div *ngIf="!items.done && !items.active" class="outerBox">
+        <div class="innerBox notDone">
+          <p>Step {{ items.id }}</p>
+          <br />
+        </div>
         <p>{{ items.task }}}</p>
       </div>
-    </li>
+    </li> -->
   </ul>
 </div>
 
