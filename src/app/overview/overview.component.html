@@ -1,44 +1,28 @@
-<div class="pageDiv">
+<div *ngIf="user" class="pageDiv">
   <img
     class="logo"
     src="../../assets/checklist-384-454891.webp"
     alt="pic of a checklist"
   />
-  <h2>Checklist Number 1</h2>
-  <ul class="ulChecklist">
-    <!-- <li *ngFor="let items of checklistItems">
-      <div *ngIf="items.done" class="outerBox">
-        <div class="innerBox done">
-          <p>Step {{ items.id }}</p>
-          <br />
-          <button class="undoneBtn">Undone</button>
-        </div>
-
-        <p class="doneText">{{ items.task }}}</p>
-      </div>
-      <div *ngIf="items.active" class="outerBox">
-        <div class="innerBox active">
-          <p>Step {{ items.id }}</p>
-          <button class="doneBtn">Done</button>
-          <br />
-        </div>
-
-        <p class="activeText">{{ items.task }}}</p>
-      </div>
-
-      <div *ngIf="!items.done && !items.active" class="outerBox">
-        <div class="innerBox notDone">
-          <p>Step {{ items.id }}</p>
-          <br />
-        </div>
-        <p>{{ items.task }}}</p>
-      </div>
-    </li> -->
-  </ul>
+  <h2>Hej {{ user.email }}!</h2>
+  <div>
+    <p *ngIf="user">Your checklist are:</p>
+    <ul>
+      <li style="list-style: none" *ngFor="let item of user.checklists">
+        <button (click)="goToChecklist(item[0].name)">
+          {{ item[0].name }}
+        </button>
+      </li>
+    </ul>
+  </div>
 </div>
 
-<!-- 
-  Bara det aktiva steget ska synas tydligt.
-  Kanske sänka Opacity om den inte är aktuell just nu.
-  Dom avklarade kanske ska ha en annan styling som är annorlunda än dom ej avklarade tasksen.
- -->
+<div class="pageDiv" *ngIf="!user">
+  <img
+    class="logo"
+    src="../../assets/checklist-384-454891.webp"
+    alt="pic of a checklist"
+  />
+  <p>No user logged in. Login to see your checklist.</p>
+  <button (click)="goToLogin()">Login</button>
+</div>

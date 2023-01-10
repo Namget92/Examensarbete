@@ -1,0 +1,68 @@
+.ulChecklist {
+  padding: 0;
+  list-style-type: none;
+}
+.outerBox {
+  background-color: #204051;
+  border: #458aaf solid 1px;
+  border-radius: 10px;
+  opacity: 95%;
+  max-width: 50vw;
+  margin: 10% 0;
+  padding: 0.5rem;
+  display: grid;
+  justify-items: center;
+}
+.innerBox {
+  display: flex;
+  width: 100%;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.doneBtn {
+  margin-left: 1%;
+  background-color: orange;
+  color: white;
+  border-radius: 10px;
+  border: white solid 1px;
+  font-size: large;
+  font-weight: bold;
+}
+
+.doneBtn:hover {
+  margin-left: 1%;
+  transform: scale(1.05);
+}
+.undoneBtn {
+  margin-left: 1%;
+  background-color: green;
+  color: white;
+  border-radius: 10px;
+  border: white solid 1px;
+  font-size: large;
+  font-weight: bold;
+}
+
+.undoneBtn:hover {
+  margin-left: 1%;
+  transform: scale(1.05);
+}
+
+.done {
+  background-color: green;
+}
+
+.notDone {
+  background-color: red;
+}
+
+.active {
+  background-color: orange;
+}
+
+.doneText {
+}
+
+.activeText {
+}

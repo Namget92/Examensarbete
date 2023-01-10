@@ -1,6 +1,7 @@
 <div class="login">
   <img src="../../assets/checklist-384-454891.webp" alt="pic of a checklist" />
   <h1>Checklist login</h1>
+  <p *ngIf="showError">{{ errorMessage }}</p>
   <form #login="ngForm" (ngSubmit)="submit(login)">
     <input
       #email="ngModel"

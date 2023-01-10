@@ -4,7 +4,14 @@ interface SearchResults {
   id: number;
   email: string;
   password: string;
-  checklists: checklistItem[];
+  checklists: [
+    [
+      {
+        name: string;
+        checklist: checklistItem[];
+      }
+    ]
+  ];
 }
 interface checklistItem {
   id: number;
