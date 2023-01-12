@@ -3,6 +3,8 @@ import { HttpHeaders, HttpParams } from '@angular/common/http';
 interface SearchResults {
   id: number;
   email: string;
+  company: string;
+  name: string;
   password: string;
   checklists: [
     [
@@ -15,9 +17,8 @@ interface SearchResults {
 }
 interface checklistItem {
   id: number;
-  task: string;
+  title: string;
   done: boolean;
-  active: boolean;
 }
 
 type options = {
