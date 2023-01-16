@@ -8,10 +8,10 @@ export class SharedService {
   constructor() {}
   currentUser!: SearchResults;
   currentChecklist!: checklistItem[];
+
   setUser(user: SearchResults) {
     this.currentUser = user;
   }
-
   getUser() {
     return this.currentUser;
   }

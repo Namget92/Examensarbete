@@ -9,12 +9,22 @@ import { SharedService } from '../shared/shared.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
   constructor(
     private http: HttpClient,
     private router: Router,
     private shared: SharedService
   ) {}
+  user!: SearchResults;
+  data!: string | null;
+
+  ngOnInit() {
+    let data = localStorage.getItem('user');
+    if (data) {
+      this.user = JSON.parse(data);
+      this.router.navigate(['overview']);
+    }
+  }
   errorMessage: any;
   showError: boolean = false;
   submit(login: any) {
@@ -23,6 +33,7 @@ export class LoginComponent {
         this.showError = false;
         this.errorMessage = '';
       }
+
       this.http.get<SearchResults[]>('http://localhost:3000/users/').subscribe({
         next: (data) => {
           data.forEach((arr) => {
@@ -30,7 +41,7 @@ export class LoginComponent {
               arr.email === login.value.email &&
               arr.password === login.value.password
             ) {
-              this.shared.setUser(arr);
+              localStorage.setItem('user', JSON.stringify(arr));
               this.router.navigate(['overview']);
             } else if (
               arr.email !== login.value.email &&

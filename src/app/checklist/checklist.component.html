@@ -1,47 +1,47 @@
-<!-- <div *ngIf="currentChecklist" class="pageDiv">
-  <img
-    class="logo"
-    src="../../assets/checklist-384-454891.webp"
-    alt="pic of a checklist"
-  />
-  <ul class="ulChecklist">
-    <li *ngFor="let items of currentChecklist">
-      <div *ngIf="items.done" class="outerBox">
-        <div class="innerBox done">
-          <p>Step {{ items.id }}</p>
-          <br />
-          <button class="undoneBtn">Undone</button>
-        </div>
+<div class="container">
+  <button (click)="logout()" class="logOut btn">Logout</button>
+  <div *ngIf="currentChecklist" class="pageDiv checklist">
+    <img
+      class="logo"
+      src="../../assets/checklist-384-454891.webp"
+      alt="pic of a checklist"
+    />
+    <br />
+    <table class="checklistTable">
+      <tr *ngFor="let items of currentChecklist">
+        <th>
+          {{ items.title }}
+        </th>
+        <td *ngIf="items.done">Completed✅</td>
+        <td *ngIf="!items.done">Not completed❌</td>
 
-        <p class="doneText">{{ items.task }}}</p>
-      </div>
-      <div *ngIf="items.active" class="outerBox">
-        <div class="innerBox active">
-          <p>Step {{ items.id }}</p>
-          <button class="doneBtn">Done</button>
-          <br />
-        </div>
+        <td *ngIf="!items.done">
+          <select name="doneOrNotDone">
+            <option value="notDone">Not Done</option>
+            <option value="done">Done</option>
+          </select>
+        </td>
+        <td *ngIf="items.done">
+          <select name="doneOrNotDone">
+            <option value="done">Done</option>
+            <option value="notDone">Not Done</option>
+          </select>
+        </td>
+        <td *ngIf="items.done">
+          Signed by: {{ items.signedBy }}{{ items.signedDate }}
+        </td>
+        <td *ngIf="!items.done">Signed by:</td>
+      </tr>
+    </table>
+  </div>
 
-        <p class="activeText">{{ items.task }}}</p>
-      </div>
-
-      <div *ngIf="!items.done && !items.active" class="outerBox">
-        <div class="innerBox notDone">
-          <p>Step {{ items.id }}</p>
-          <br />
-        </div>
-        <p>{{ items.task }}}</p>
-      </div>
-    </li>
-  </ul>
+  <div class="pageDiv" *ngIf="!currentChecklist">
+    <img
+      class="logo"
+      src="../../assets/checklist-384-454891.webp"
+      alt="pic of a checklist"
+    />
+    <p>No user logged in. Login to see your checklist.</p>
+    <button class="btn" (click)="goToLogin()">Login</button>
+  </div>
 </div>
-
-<div class="pageDiv" *ngIf="!currentChecklist">
-  <img
-    class="logo"
-    src="../../assets/checklist-384-454891.webp"
-    alt="pic of a checklist"
-  />
-  <p>No user logged in. Login to see your checklist.</p>
-  <button (click)="goToLogin()">Login</button>
-</div> -->

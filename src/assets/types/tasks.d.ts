@@ -19,6 +19,8 @@ interface checklistItem {
   id: number;
   title: string;
   done: boolean;
+  signedDate: string;
+  signedBy: string;
 }
 
 type options = {

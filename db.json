@@ -13,53 +13,73 @@
                         "checklist": [
                             {
                                 "id": 1,
-                                "done": false,
-                                "title": "Skicka in siffror"
+                                "done": true,
+                                "signedBy": "Max Martin",
+                                "signedDate": "16/01/23",
+                                "title": "Steg 1"
                             },
                             {
                                 "id": 2,
                                 "done": false,
-                                "title": "Uppdatera siffror"
+                                "signedBy": "",
+                                "signedDate": 0,
+                                "title": "Steg 2"
                             },
                             {
                                 "id": 3,
                                 "done": false,
-                                "title": "Rappotera siffror"
+                                "signedBy": "",
+                                "signedDate": 0,
+                                "title": "Steg 3"
                             },
                             {
                                 "id": 4,
                                 "done": false,
-                                "title": "Granska siffror"
+                                "signedBy": "",
+                                "signedDate": 0,
+                                "title": "Steg 4"
                             },
                             {
                                 "id": 5,
                                 "done": false,
-                                "title": "Överväga siffror"
+                                "signedBy": "",
+                                "signedDate": 0,
+                                "title": "Steg 5"
                             },
                             {
                                 "id": 6,
                                 "done": false,
-                                "title": "Ta hand om siffror"
+                                "signedBy": "",
+                                "signedDate": 0,
+                                "title": "Steg 6"
                             },
                             {
                                 "id": 7,
                                 "done": false,
-                                "title": "Be oss kolla in siffror"
+                                "signedBy": "",
+                                "signedDate": 0,
+                                "title": "Steg 7"
                             },
                             {
                                 "id": 8,
                                 "done": false,
-                                "title": "Titta på siffror"
+                                "signedBy": "",
+                                "signedDate": 0,
+                                "title": "Steg 8"
                             },
                             {
                                 "id": 9,
                                 "done": false,
-                                "title": "Besikta siffror"
+                                "signedBy": "",
+                                "signedDate": 0,
+                                "title": "Steg 9"
                             },
                             {
                                 "id": 10,
                                 "done": false,
-                                "title": "Ta bort siffror?"
+                                "signedBy": "",
+                                "signedDate": 0,
+                                "title": "Steg 10"
                             }
                         ]
                     }
@@ -80,52 +100,72 @@
                             {
                                 "id": 1,
                                 "done": false,
-                                "title": "Skicka in siffror"
+                                "signedBy": "",
+                                "signedDate": 0,
+                                "title": "Steg 1"
                             },
                             {
                                 "id": 2,
                                 "done": false,
-                                "title": "Uppdatera siffror"
+                                "signedBy": "",
+                                "signedDate": 0,
+                                "title": "Steg 2"
                             },
                             {
                                 "id": 3,
                                 "done": false,
-                                "title": "Rappotera siffror"
+                                "signedBy": "",
+                                "signedDate": 0,
+                                "title": "Steg 3"
                             },
                             {
                                 "id": 4,
                                 "done": false,
-                                "title": "Granska siffror"
+                                "signedBy": "",
+                                "signedDate": 0,
+                                "title": "Steg 4"
                             },
                             {
                                 "id": 5,
                                 "done": false,
-                                "title": "Överväga siffror"
+                                "signedBy": "",
+                                "signedDate": 0,
+                                "title": "Steg 5"
                             },
                             {
                                 "id": 6,
                                 "done": false,
-                                "title": "Ta hand om siffror"
+                                "signedBy": "",
+                                "signedDate": 0,
+                                "title": "Steg 6"
                             },
                             {
                                 "id": 7,
                                 "done": false,
-                                "title": "Be oss kolla in siffror"
+                                "signedBy": "",
+                                "signedDate": 0,
+                                "title": "Steg 7"
                             },
                             {
                                 "id": 8,
                                 "done": false,
-                                "title": "Titta på siffror"
+                                "signedBy": "",
+                                "signedDate": 0,
+                                "title": "Steg 8"
                             },
                             {
                                 "id": 9,
                                 "done": false,
-                                "title": "Besikta siffror"
+                                "signedBy": "",
+                                "signedDate": 0,
+                                "title": "Steg 9"
                             },
                             {
                                 "id": 10,
                                 "done": false,
-                                "title": "Ta bort siffror?"
+                                "signedBy": "",
+                                "signedDate": 0,
+                                "title": "Steg 10"
                             }
                         ]
                     }
