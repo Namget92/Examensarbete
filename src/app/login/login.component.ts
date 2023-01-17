@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
     let data = localStorage.getItem('user');
     if (data) {
       this.user = JSON.parse(data);
-      this.router.navigate(['overview']);
+      this.router.navigate(['checklist']);
     }
   }
   errorMessage: any;
@@ -42,7 +42,7 @@ export class LoginComponent implements OnInit {
               arr.password === login.value.password
             ) {
               localStorage.setItem('user', JSON.stringify(arr));
-              this.router.navigate(['overview']);
+              this.router.navigate(['checklist']);
             } else if (
               arr.email !== login.value.email &&
               arr.password === login.value.password

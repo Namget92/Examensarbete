@@ -2,9 +2,9 @@ table,
 tr,
 th,
 td {
-  border: 1px solid black;
-  padding: 1rem;
+  padding: 0.5rem;
   text-align: center;
+  font-size: 1.3rem;
 }
 table {
   background-color: #fc6e51;
@@ -14,4 +14,8 @@ tr,
 th,
 td {
   background-color: #204051;
+}
+
+.comments {
+  text-align: left;
 }

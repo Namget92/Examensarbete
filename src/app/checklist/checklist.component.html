@@ -1,47 +1,42 @@
-<div class="container">
-  <button (click)="logout()" class="logOut btn">Logout</button>
-  <div *ngIf="currentChecklist" class="pageDiv checklist">
-    <img
-      class="logo"
-      src="../../assets/checklist-384-454891.webp"
-      alt="pic of a checklist"
-    />
-    <br />
+<div *ngIf="user" class="container">
+  <app-top-bar></app-top-bar>
+  <div class="pageDiv">
+    <p>{{ user.name }} - {{ user.company }} - {{ month }}</p>
+    <button class="btn" role="button">Edit</button>
     <table class="checklistTable">
-      <tr *ngFor="let items of currentChecklist">
-        <th>
-          {{ items.title }}
-        </th>
-        <td *ngIf="items.done">Completed✅</td>
-        <td *ngIf="!items.done">Not completed❌</td>
+      <tr>
+        <th>Status</th>
+        <th>Title</th>
+        <th>Value</th>
+        <th>Signed by</th>
+        <th>Date</th>
+      </tr>
+      <tr *ngFor="let items of user.checklists">
+        <td *ngIf="items.value">🟢</td>
+        <td *ngIf="!items.value">🔴</td>
 
-        <td *ngIf="!items.done">
-          <select name="doneOrNotDone">
-            <option value="notDone">Not Done</option>
-            <option value="done">Done</option>
-          </select>
-        </td>
-        <td *ngIf="items.done">
-          <select name="doneOrNotDone">
-            <option value="done">Done</option>
-            <option value="notDone">Not Done</option>
-          </select>
-        </td>
-        <td *ngIf="items.done">
-          Signed by: {{ items.signedBy }}{{ items.signedDate }}
-        </td>
-        <td *ngIf="!items.done">Signed by:</td>
+        <td>{{ items.title }}</td>
+
+        <td *ngIf="items.value">{{ items.value }}</td>
+        <td *ngIf="!items.value"></td>
+
+        <td *ngIf="items.value">{{ items.signedDate }}</td>
+        <td *ngIf="!items.value"></td>
+
+        <td *ngIf="items.value">{{ items.signedDate }}</td>
+        <td *ngIf="!items.value"></td>
+      </tr>
+      <tr>
+        <td class="comments" colspan="5">Comments:</td>
       </tr>
     </table>
-  </div>
-
-  <div class="pageDiv" *ngIf="!currentChecklist">
-    <img
-      class="logo"
-      src="../../assets/checklist-384-454891.webp"
-      alt="pic of a checklist"
-    />
-    <p>No user logged in. Login to see your checklist.</p>
-    <button class="btn" (click)="goToLogin()">Login</button>
+    <p>Comments:</p>
+    <p>{{ user.overallComments }}</p>
   </div>
 </div>
+
+<div *ngIf="!user">
+  <app-not-signed-in></app-not-signed-in>
+</div>
+
+<!-- Fixa så man kan editera checklistan -->

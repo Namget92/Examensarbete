@@ -1,0 +1,25 @@
+.topBar {
+  display: flex;
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  top: 0rem;
+  border-bottom: 1px solid #ffffff;
+  color: #ffffff;
+  align-items: center;
+}
+
+.logo {
+  width: 4rem;
+  padding: 1rem;
+}
+.topBarLeft {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.topBarRight {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}

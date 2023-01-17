@@ -1,0 +1,22 @@
+<div *ngIf="user" class="container">
+  <app-top-bar></app-top-bar>
+  <div class="pageDiv">
+    <h2>About this page</h2>
+    <h3>
+      This page is my graduation project. The goal of it is partly to learn the
+      Angular framework as well as to create a light version of what I will
+      create at my internship.
+    </h3>
+  </div>
+</div>
+
+<div *ngIf="!user" class="container">
+  <div class="pageDiv">
+    <h2>About this page</h2>
+    <h3>
+      This page is my graduation project. The goal of it is partly to learn the
+      Angular framework as well as to create a light version of what I will
+      create at my internship.
+    </h3>
+  </div>
+</div>

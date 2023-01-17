@@ -6,21 +6,15 @@ interface SearchResults {
   company: string;
   name: string;
   password: string;
-  checklists: [
-    [
-      {
-        name: string;
-        checklist: checklistItem[];
-      }
-    ]
-  ];
+  overallComments: string;
+  checklists: checklistItem[];
 }
 interface checklistItem {
   id: number;
   title: string;
-  done: boolean;
-  signedDate: string;
+  value: number;
   signedBy: string;
+  signedDate: number;
 }
 
 type options = {

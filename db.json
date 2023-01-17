@@ -6,170 +6,43 @@
             "company": "Volvo",
             "name": "Erik Andersson",
             "password": "v70",
+            "overallComments": "",
             "checklists": [
-                [
-                    {
-                        "name": "Rappoterings checklista",
-                        "checklist": [
-                            {
-                                "id": 1,
-                                "done": true,
-                                "signedBy": "Max Martin",
-                                "signedDate": "16/01/23",
-                                "title": "Steg 1"
-                            },
-                            {
-                                "id": 2,
-                                "done": false,
-                                "signedBy": "",
-                                "signedDate": 0,
-                                "title": "Steg 2"
-                            },
-                            {
-                                "id": 3,
-                                "done": false,
-                                "signedBy": "",
-                                "signedDate": 0,
-                                "title": "Steg 3"
-                            },
-                            {
-                                "id": 4,
-                                "done": false,
-                                "signedBy": "",
-                                "signedDate": 0,
-                                "title": "Steg 4"
-                            },
-                            {
-                                "id": 5,
-                                "done": false,
-                                "signedBy": "",
-                                "signedDate": 0,
-                                "title": "Steg 5"
-                            },
-                            {
-                                "id": 6,
-                                "done": false,
-                                "signedBy": "",
-                                "signedDate": 0,
-                                "title": "Steg 6"
-                            },
-                            {
-                                "id": 7,
-                                "done": false,
-                                "signedBy": "",
-                                "signedDate": 0,
-                                "title": "Steg 7"
-                            },
-                            {
-                                "id": 8,
-                                "done": false,
-                                "signedBy": "",
-                                "signedDate": 0,
-                                "title": "Steg 8"
-                            },
-                            {
-                                "id": 9,
-                                "done": false,
-                                "signedBy": "",
-                                "signedDate": 0,
-                                "title": "Steg 9"
-                            },
-                            {
-                                "id": 10,
-                                "done": false,
-                                "signedBy": "",
-                                "signedDate": 0,
-                                "title": "Steg 10"
-                            }
-                        ]
-                    }
-                ]
-            ]
-        },
-        {
-            "id": 2,
-            "email": "lisa@ica.nu",
-            "company": "Ica",
-            "name": "Lisa Skog",
-            "password": "basic",
-            "checklists": [
-                [
-                    {
-                        "name": "Rappoterings checklista",
-                        "checklist": [
-                            {
-                                "id": 1,
-                                "done": false,
-                                "signedBy": "",
-                                "signedDate": 0,
-                                "title": "Steg 1"
-                            },
-                            {
-                                "id": 2,
-                                "done": false,
-                                "signedBy": "",
-                                "signedDate": 0,
-                                "title": "Steg 2"
-                            },
-                            {
-                                "id": 3,
-                                "done": false,
-                                "signedBy": "",
-                                "signedDate": 0,
-                                "title": "Steg 3"
-                            },
-                            {
-                                "id": 4,
-                                "done": false,
-                                "signedBy": "",
-                                "signedDate": 0,
-                                "title": "Steg 4"
-                            },
-                            {
-                                "id": 5,
-                                "done": false,
-                                "signedBy": "",
-                                "signedDate": 0,
-                                "title": "Steg 5"
-                            },
-                            {
-                                "id": 6,
-                                "done": false,
-                                "signedBy": "",
-                                "signedDate": 0,
-                                "title": "Steg 6"
-                            },
-                            {
-                                "id": 7,
-                                "done": false,
-                                "signedBy": "",
-                                "signedDate": 0,
-                                "title": "Steg 7"
-                            },
-                            {
-                                "id": 8,
-                                "done": false,
-                                "signedBy": "",
-                                "signedDate": 0,
-                                "title": "Steg 8"
-                            },
-                            {
-                                "id": 9,
-                                "done": false,
-                                "signedBy": "",
-                                "signedDate": 0,
-                                "title": "Steg 9"
-                            },
-                            {
-                                "id": 10,
-                                "done": false,
-                                "signedBy": "",
-                                "signedDate": 0,
-                                "title": "Steg 10"
-                            }
-                        ]
-                    }
-                ]
+                {
+                    "id": 1,
+                    "title": "Reconciliation Differnces Status",
+                    "value": 46542,
+                    "signedBy": "Erik Andersson",
+                    "signedDate": 230117
+                },
+                {
+                    "id": 2,
+                    "title": "Profit And Loss Status",
+                    "value": 0,
+                    "signedBy": "",
+                    "signedDate": 0
+                },
+                {
+                    "id": 3,
+                    "title": "Balance Sheet Status",
+                    "value": 0,
+                    "signedBy": "",
+                    "signedDate": 0
+                },
+                {
+                    "id": 4,
+                    "title": "Cash Flow Status",
+                    "value": 0,
+                    "signedBy": "",
+                    "signedDate": 0
+                },
+                {
+                    "id": 5,
+                    "title": "Notes Status",
+                    "value": 0,
+                    "signedBy": "",
+                    "signedDate": 0
+                }
             ]
         }
     ]
