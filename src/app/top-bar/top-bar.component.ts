@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 import { checklistItem, SearchResults } from 'src/assets/types/tasks';
@@ -16,6 +16,9 @@ export class TopBarComponent {
     private shared: SharedService,
     private router: Router
   ) {}
+
+  @Input()
+  pageName!: string;
 
   user!: SearchResults;
   data!: string | null;

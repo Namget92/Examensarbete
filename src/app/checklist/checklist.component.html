@@ -1,37 +1,56 @@
-<div *ngIf="user" class="container">
-  <app-top-bar></app-top-bar>
+<div *ngIf="user">
+  <app-top-bar [pageName]="pageName"></app-top-bar>
+
   <div class="pageDiv">
     <p>{{ user.name }} - {{ user.company }} - {{ month }}</p>
-    <button class="btn" role="button">Edit</button>
-    <table class="checklistTable">
-      <tr>
-        <th>Status</th>
-        <th>Title</th>
-        <th>Value</th>
-        <th>Signed by</th>
-        <th>Date</th>
-      </tr>
-      <tr *ngFor="let items of user.checklists">
-        <td *ngIf="items.value">🟢</td>
-        <td *ngIf="!items.value">🔴</td>
 
-        <td>{{ items.title }}</td>
+    <div *ngIf="!editBoo">
+      <table class="checklistTable">
+        <tr>
+          <th>Edit</th>
+          <th>Status</th>
+          <th>Title</th>
+          <th>Value</th>
+          <th>Signed by</th>
+          <th>Date</th>
+        </tr>
+        <tr *ngFor="let items of user.checklists">
+          <td>
+            <button
+              *ngIf="!editBoo"
+              class="btn editBtn"
+              role="button"
+              (click)="editBooBtn(items)"
+            >
+              ✏️
+            </button>
+          </td>
+          <td *ngIf="items.value">🟢</td>
+          <td *ngIf="!items.value">🔴</td>
 
-        <td *ngIf="items.value">{{ items.value }}</td>
-        <td *ngIf="!items.value"></td>
+          <td>{{ items.title }}</td>
 
-        <td *ngIf="items.value">{{ items.signedDate }}</td>
-        <td *ngIf="!items.value"></td>
+          <td *ngIf="items.value">{{ items.value }}€</td>
+          <td *ngIf="!items.value"></td>
 
-        <td *ngIf="items.value">{{ items.signedDate }}</td>
-        <td *ngIf="!items.value"></td>
-      </tr>
-      <tr>
-        <td class="comments" colspan="5">Comments:</td>
-      </tr>
-    </table>
-    <p>Comments:</p>
-    <p>{{ user.overallComments }}</p>
+          <td *ngIf="items.value">{{ items.signedBy }}</td>
+          <td *ngIf="!items.value"></td>
+
+          <td *ngIf="items.value">{{ items.signedDate }}</td>
+          <td *ngIf="!items.value"></td>
+        </tr>
+        <tr>
+          <td>
+            <button *ngIf="!editBoo" class="btn editBtn" role="button">
+              ✏️
+            </button>
+          </td>
+          <td class="comments" colspan="5">
+            Comments: {{ user.overallComments }}
+          </td>
+        </tr>
+      </table>
+    </div>
   </div>
 </div>
 

@@ -1,9 +1,7 @@
 .topBar {
   display: flex;
   width: 100vw;
-  position: absolute;
-  left: 0;
-  top: 0rem;
+
   border-bottom: 1px solid #ffffff;
   color: #ffffff;
   align-items: center;

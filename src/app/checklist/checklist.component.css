@@ -19,3 +19,12 @@ td {
 .comments {
   text-align: left;
 }
+.editBtn {
+  background-color: #204051;
+  padding: 1rem;
+  border: none;
+}
+
+.comments {
+  width: 90%;
+}

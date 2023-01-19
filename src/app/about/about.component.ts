@@ -10,6 +10,7 @@ import { TopBarComponent } from '../top-bar/top-bar.component';
   styleUrls: ['./about.component.css'],
 })
 export class AboutComponent {
+  pageName = 'About';
   constructor(private shared: SharedService, private router: Router) {}
   currentChecklist!: checklistItem[];
   user!: SearchResults;

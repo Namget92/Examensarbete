@@ -1,3 +1,7 @@
-h3 {
+blockquote {
   margin: 2rem;
+  text-align: center;
+}
+.about {
+  height: 75vh;
 }

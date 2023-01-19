@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 import { checklistItem, SearchResults } from 'src/assets/types/tasks';
 import { SharedService } from '../shared/shared.service';
 
@@ -9,13 +10,62 @@ import { SharedService } from '../shared/shared.service';
   styleUrls: ['./checklist.component.css'],
 })
 export class ChecklistComponent implements OnInit {
-  constructor(private shared: SharedService, private router: Router) {}
+  constructor(
+    private http: HttpClient,
+    private shared: SharedService,
+    private router: Router
+  ) {}
   currentChecklist!: checklistItem[];
   user!: SearchResults;
   data!: string | null;
   month: string = '';
+  pageName = 'Checklist';
+  editBoo = false;
+  deleteDb = true;
+
+  resetStats = {
+    overallComments: '',
+    checklists: [
+      {
+        id: 1,
+        title: 'Reconciliation Differnces Status',
+        value: 0,
+        signedBy: '',
+        signedDate: 0,
+      },
+      {
+        id: 2,
+        title: 'Profit And Loss Status',
+        value: 0,
+        signedBy: '',
+        signedDate: 0,
+      },
+      {
+        id: 3,
+        title: 'Balance Sheet Status',
+        value: 0,
+        signedBy: '',
+        signedDate: 0,
+      },
+      {
+        id: 4,
+        title: 'Cash Flow Status',
+        value: 0,
+        signedBy: '',
+        signedDate: 0,
+      },
+      {
+        id: 5,
+        title: 'Notes Status',
+        value: 0,
+        signedBy: '',
+        signedDate: 0,
+      },
+    ],
+  };
 
   ngOnInit() {
+    this.deleteDbFunc();
     this.setMonth(new Date().getMonth() + 1);
     let userData: string | null = localStorage.getItem('user');
     if (userData) {
@@ -25,8 +75,32 @@ export class ChecklistComponent implements OnInit {
     if (userChecklist) {
       this.currentChecklist = JSON.parse(userChecklist);
     }
+  }
 
-    this.user.checklists.map((check) => console.log(check));
+  editBooBtn(checklistItem: checklistItem) {
+    console.log(checklistItem);
+    console.log(this.user);
+  }
+
+  deleteDbFunc() {
+    if (new Date().getDate() === 1 && this.deleteDb) {
+      this.http
+        .patch<SearchResults[]>(
+          `http://localhost:3000/users/${this.user.id}`,
+          this.resetStats
+        )
+        .subscribe({
+          next: () => {
+            this.deleteDb = false;
+          },
+          error: (error) => {
+            console.error('There was an error', error);
+          },
+        });
+    }
+    if (new Date().getDate() !== 1 && !this.deleteDb) {
+      this.deleteDb = true;
+    }
   }
 
   setMonth(num: number) {

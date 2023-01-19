@@ -2,18 +2,43 @@
     "users": [
         {
             "id": 1,
-            "email": "erik@volvo.se",
-            "company": "Volvo",
+            "email": "Erik@volvo.se",
+            "company": "volvo",
             "name": "Erik Andersson",
-            "password": "v70",
-            "overallComments": "",
-            "checklists": [
+            "password": "volvoErik"
+        },
+        {
+            "id": 2,
+            "email": "Lisa@volvo.se",
+            "company": "volvo",
+            "name": "Lisa Glas",
+            "password": "volvoLisa"
+        },
+        {
+            "id": 3,
+            "email": "Hassan@ica.se",
+            "company": "ica",
+            "name": "Hassan Berg",
+            "password": "icaHassan"
+        },
+        {
+            "id": 4,
+            "email": "Bengt@ica.se",
+            "company": "ica",
+            "name": "Bengt Stål",
+            "password": "icaHassan"
+        }
+    ],
+    "companies": [
+        {
+            "id": 1,
+            "volvo": [
                 {
                     "id": 1,
-                    "title": "Reconciliation Differnces Status",
-                    "value": 46542,
-                    "signedBy": "Erik Andersson",
-                    "signedDate": 230117
+                    "title": "",
+                    "value": 0,
+                    "signedBy": "",
+                    "signedDate": 0
                 },
                 {
                     "id": 2,
@@ -43,7 +68,49 @@
                     "signedBy": "",
                     "signedDate": 0
                 }
-            ]
+            ],
+            "comments": ""
+        },
+        {
+            "id": 2,
+            "ica": [
+                {
+                    "id": 1,
+                    "title": "Reconciliation Differnces Status",
+                    "value": 0,
+                    "signedBy": "",
+                    "signedDate": 0
+                },
+                {
+                    "id": 2,
+                    "title": "Profit And Loss Status",
+                    "value": 0,
+                    "signedBy": "",
+                    "signedDate": 0
+                },
+                {
+                    "id": 3,
+                    "title": "Balance Sheet Status",
+                    "value": 0,
+                    "signedBy": "",
+                    "signedDate": 0
+                },
+                {
+                    "id": 4,
+                    "title": "Cash Flow Status",
+                    "value": 0,
+                    "signedBy": "",
+                    "signedDate": 0
+                },
+                {
+                    "id": 5,
+                    "title": "Notes Status",
+                    "value": 0,
+                    "signedBy": "",
+                    "signedDate": 0
+                }
+            ],
+            "comments": ""
         }
     ]
 }
