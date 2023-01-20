@@ -1,116 +1,170 @@
 {
-    "users": [
+  "users": [
+    {
+      "id": 1,
+      "email": "Erik@volvo.se",
+      "company": "Volvo",
+      "name": "Erik Andersson",
+      "password": "volvoErik"
+    },
+    {
+      "id": 2,
+      "email": "Lisa@volvo.se",
+      "company": "Volvo",
+      "name": "Lisa Glas",
+      "password": "volvoLisa"
+    },
+    {
+      "id": 3,
+      "email": "Hassan@ica.se",
+      "company": "Ica",
+      "name": "Hassan Berg",
+      "password": "icaHassan"
+    },
+    {
+      "id": 4,
+      "email": "Bengt@ica.se",
+      "company": "Ica",
+      "name": "Bengt Stål",
+      "password": "icaHassan"
+    }
+  ],
+  "companies": [
+    {
+      "0": {
+        "id": 1,
+        "title": "Reconciliation Differnces Status",
+        "value": 0,
+        "signedBy": "",
+        "signedDate": "",
+        "isBeingEdited": false
+      },
+      "1": {
+        "id": 2,
+        "title": "Profit And Loss Status",
+        "value": 0,
+        "signedBy": "",
+        "signedDate": "",
+        "isBeingEdited": true
+      },
+      "2": {
+        "id": 3,
+        "title": "Balance Sheet Status",
+        "value": "345",
+        "signedBy": "Erik Andersson",
+        "signedDate": "20/01/23",
+        "isBeingEdited": false
+      },
+      "3": {
+        "id": 4,
+        "title": "Cash Flow Status",
+        "value": "456",
+        "signedBy": "Erik Andersson",
+        "signedDate": "20/01/23",
+        "isBeingEdited": false
+      },
+      "4": {
+        "id": 5,
+        "title": "Notes Status",
+        "value": "567",
+        "signedBy": "Erik Andersson",
+        "signedDate": "20/01/23",
+        "isBeingEdited": false
+      },
+      "id": 1,
+      "name": "Volvo",
+      "checklist": [
         {
-            "id": 1,
-            "email": "Erik@volvo.se",
-            "company": "volvo",
-            "name": "Erik Andersson",
-            "password": "volvoErik"
+          "id": 1,
+          "title": "Reconciliation Differnces Status",
+          "value": 0,
+          "signedBy": "",
+          "signedDate": "",
+          "isBeingEdited": false
         },
         {
-            "id": 2,
-            "email": "Lisa@volvo.se",
-            "company": "volvo",
-            "name": "Lisa Glas",
-            "password": "volvoLisa"
+          "id": 2,
+          "title": "Profit And Loss Status",
+          "value": 0,
+          "signedBy": "",
+          "signedDate": "",
+          "isBeingEdited": false
         },
         {
-            "id": 3,
-            "email": "Hassan@ica.se",
-            "company": "ica",
-            "name": "Hassan Berg",
-            "password": "icaHassan"
+          "id": 3,
+          "title": "Balance Sheet Status",
+          "value": "345",
+          "signedBy": "Erik Andersson",
+          "signedDate": "20/01/23",
+          "isBeingEdited": false
         },
         {
-            "id": 4,
-            "email": "Bengt@ica.se",
-            "company": "ica",
-            "name": "Bengt Stål",
-            "password": "icaHassan"
+          "id": 4,
+          "title": "Cash Flow Status",
+          "value": "456",
+          "signedBy": "Erik Andersson",
+          "signedDate": "20/01/23",
+          "isBeingEdited": false
+        },
+        {
+          "id": 5,
+          "title": "Notes Status",
+          "value": "567",
+          "signedBy": "Erik Andersson",
+          "signedDate": "20/01/23",
+          "isBeingEdited": false
         }
-    ],
-    "companies": [
+      ],
+      "comments": "Hej på dig!",
+      "commentsBeingEdited": false
+    },
+    {
+      "id": 2,
+      "name": "Ica",
+      "checklist": [
         {
-            "id": 1,
-            "volvo": [
-                {
-                    "id": 1,
-                    "title": "",
-                    "value": 0,
-                    "signedBy": "",
-                    "signedDate": 0
-                },
-                {
-                    "id": 2,
-                    "title": "Profit And Loss Status",
-                    "value": 0,
-                    "signedBy": "",
-                    "signedDate": 0
-                },
-                {
-                    "id": 3,
-                    "title": "Balance Sheet Status",
-                    "value": 0,
-                    "signedBy": "",
-                    "signedDate": 0
-                },
-                {
-                    "id": 4,
-                    "title": "Cash Flow Status",
-                    "value": 0,
-                    "signedBy": "",
-                    "signedDate": 0
-                },
-                {
-                    "id": 5,
-                    "title": "Notes Status",
-                    "value": 0,
-                    "signedBy": "",
-                    "signedDate": 0
-                }
-            ],
-            "comments": ""
+          "id": 1,
+          "title": "Reconciliation Differnces Status",
+          "value": 0,
+          "signedBy": "",
+          "signedDate": 0,
+          "isBeingEdited": false
         },
         {
-            "id": 2,
-            "ica": [
-                {
-                    "id": 1,
-                    "title": "Reconciliation Differnces Status",
-                    "value": 0,
-                    "signedBy": "",
-                    "signedDate": 0
-                },
-                {
-                    "id": 2,
-                    "title": "Profit And Loss Status",
-                    "value": 0,
-                    "signedBy": "",
-                    "signedDate": 0
-                },
-                {
-                    "id": 3,
-                    "title": "Balance Sheet Status",
-                    "value": 0,
-                    "signedBy": "",
-                    "signedDate": 0
-                },
-                {
-                    "id": 4,
-                    "title": "Cash Flow Status",
-                    "value": 0,
-                    "signedBy": "",
-                    "signedDate": 0
-                },
-                {
-                    "id": 5,
-                    "title": "Notes Status",
-                    "value": 0,
-                    "signedBy": "",
-                    "signedDate": 0
-                }
-            ],
-            "comments": ""
+          "id": 2,
+          "title": "Profit And Loss Status",
+          "value": 0,
+          "signedBy": "",
+          "signedDate": 0,
+          "isBeingEdited": false
+        },
+        {
+          "id": 3,
+          "title": "Balance Sheet Status",
+          "value": 0,
+          "signedBy": "",
+          "signedDate": 0,
+          "isBeingEdited": false
+        },
+        {
+          "id": 4,
+          "title": "Cash Flow Status",
+          "value": 0,
+          "signedBy": "",
+          "signedDate": 0,
+          "isBeingEdited": false
+        },
+        {
+          "id": 5,
+          "title": "Notes Status",
+          "value": 0,
+          "signedBy": "",
+          "signedDate": 0,
+          "isBeingEdited": false
         }
-    ]
+      ],
+      "comments": "",
+      "commentsBeingEdited": false
+    }
+  ]
 }

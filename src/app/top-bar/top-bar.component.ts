@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
-import { checklistItem, SearchResults } from 'src/assets/types/tasks';
+import { User } from 'src/assets/types/tasks';
 
 import { SharedService } from '../shared/shared.service';
 
@@ -20,7 +20,7 @@ export class TopBarComponent {
   @Input()
   pageName!: string;
 
-  user!: SearchResults;
+  user!: User;
   data!: string | null;
   logout() {
     localStorage.clear();

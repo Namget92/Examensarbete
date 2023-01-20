@@ -17,10 +17,14 @@
 }
 .loginInput {
   font-size: 1.1rem;
-  padding: 0.5rem;
+  padding: 0.7rem;
   border-radius: 10px;
 }
 
 .displayDiv {
   display: grid;
+}
+
+.submitBtn {
+  margin-top: 0.5rem;
 }

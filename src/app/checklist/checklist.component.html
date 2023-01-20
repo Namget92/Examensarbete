@@ -4,49 +4,84 @@
   <div class="pageDiv">
     <p>{{ user.name }} - {{ user.company }} - {{ month }}</p>
 
-    <div *ngIf="!editBoo">
+    <div>
       <table class="checklistTable">
         <tr>
-          <th>Edit</th>
           <th>Status</th>
           <th>Title</th>
           <th>Value</th>
           <th>Signed by</th>
           <th>Date</th>
         </tr>
-        <tr *ngFor="let items of user.checklists">
-          <td>
-            <button
-              *ngIf="!editBoo"
-              class="btn editBtn"
-              role="button"
-              (click)="editBooBtn(items)"
-            >
-              ✏️
-            </button>
-          </td>
+        <tr *ngFor="let items of company.checklist">
+          <!-- Status -->
           <td *ngIf="items.value">🟢</td>
           <td *ngIf="!items.value">🔴</td>
 
+          <!-- Title -->
           <td>{{ items.title }}</td>
 
-          <td *ngIf="items.value">{{ items.value }}€</td>
-          <td *ngIf="!items.value"></td>
+          <!-- Value -->
 
+          <!-- Before and After Edit -->
+          <div class="deleteDiv" *ngIf="!items.isBeingEdited">
+            <!-- value <= 0 -->
+            <td *ngIf="items.value">
+              {{ items.value }}€
+              <button (click)="deleteBtn(items.id)" class="delete">❌</button>
+            </td>
+            <!-- value > 0 -->
+            <td *ngIf="!items.value">
+              <button
+                (click)="editBooBtn(items.id)"
+                class="btn editBtn empty"
+                role="button"
+              >
+                Enter Value
+              </button>
+            </td>
+          </div>
+
+          <!-- During Edit-->
+          <td *ngIf="items.isBeingEdited">
+            <div class="editDiv">
+              <form (ngSubmit)="saveEditBtn(items.id, $event.target[0].value)">
+                <input class="inputValue" type="number" />
+                <input
+                  type="submit"
+                  name="submit"
+                  value="💾"
+                  class="valueSave"
+                />
+              </form>
+            </div>
+          </td>
+
+          <!-- Signed by -->
           <td *ngIf="items.value">{{ items.signedBy }}</td>
           <td *ngIf="!items.value"></td>
 
+          <!-- Signed date -->
           <td *ngIf="items.value">{{ items.signedDate }}</td>
           <td *ngIf="!items.value"></td>
         </tr>
+
+        <!-- Comments-->
         <tr>
-          <td>
-            <button *ngIf="!editBoo" class="btn editBtn" role="button">
-              ✏️
-            </button>
+          <td class="comments" *ngIf="!company.commentsBeingEdited" colspan="5">
+            Comments: {{ company.comments }}
+            <button class="commentBtn" (click)="commentBooFlip()">✏️</button>
           </td>
-          <td class="comments" colspan="5">
-            Comments: {{ user.overallComments }}
+          <td class="comments" *ngIf="company.commentsBeingEdited" colspan="5">
+            <form (ngSubmit)="commentBooSave($event.target[0].value)">
+              <input
+                placeholder="Comments"
+                type="text"
+                class="commentInput"
+                value="{{ company.comments }}"
+              />
+              <input class="commentBtn" type="submit" value="💾" />
+            </form>
           </td>
         </tr>
       </table>

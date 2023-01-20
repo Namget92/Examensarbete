@@ -19,12 +19,66 @@ td {
 .comments {
   text-align: left;
 }
+
+.commentInput {
+  width: 96%;
+}
 .editBtn {
   background-color: #204051;
   padding: 1rem;
   border: none;
 }
 
+.delete {
+  display: grid;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background-color: #204051;
+  border: none;
+  margin: 0;
+  padding: 1px;
+  text-shadow: 1.5px 1.5px #204051;
+  border: 1px solid #204051;
+  cursor: pointer;
+}
+.commentBtn {
+  display: grid;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background-color: #204051;
+  border: none;
+  margin: 0;
+  padding: 1px;
+  text-shadow: 1.5px 1.5px #204051;
+  border: 1px solid #204051;
+  cursor: pointer;
+}
+.deleteDiv {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.valueSave {
+  background-color: #204051;
+  border: none;
+  margin: 1px;
+  padding: 1px;
+  text-shadow: 1.5px 1.5px #204051;
+  cursor: pointer;
+}
+
 .comments {
   width: 90%;
+  position: relative;
+}
+.inputValue {
+  background-color: #fc6e51;
+}
+.editDiv {
+  display: flex;
+  justify-content: center;
 }

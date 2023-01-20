@@ -1,20 +1,27 @@
 import { HttpHeaders, HttpParams } from '@angular/common/http';
 
-interface SearchResults {
+interface User {
   id: number;
   email: string;
   company: string;
   name: string;
   password: string;
-  overallComments: string;
-  checklists: checklistItem[];
 }
+interface Company {
+  id: number;
+  name: string;
+  checklist: checklistItem[];
+  comments: string;
+  commentsBeingEdited: boolean;
+}
+
 interface checklistItem {
   id: number;
   title: string;
   value: number;
   signedBy: string;
-  signedDate: number;
+  signedDate: string;
+  isBeingEdited: boolean;
 }
 
 type options = {

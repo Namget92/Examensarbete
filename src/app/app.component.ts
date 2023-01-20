@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { SearchResults } from 'src/assets/types/tasks';
 import { SharedService } from './shared/shared.service';
 
 @Component({
@@ -10,7 +9,7 @@ import { SharedService } from './shared/shared.service';
 })
 export class AppComponent implements OnInit {
   constructor(private router: Router, private shared: SharedService) {}
-  sharedServiceUser!: SearchResults;
+
   data!: string | null;
 
   ngOnInit() {
