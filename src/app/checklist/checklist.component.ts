@@ -34,7 +34,9 @@ export class ChecklistComponent implements OnInit {
   }
 
   editBooBtn(id: number) {
-    const list = this.company.checklist;
+    console.log(id);
+    const co = this.company;
+    const list = co.checklist;
     list.map((items) => {
       if (items.id === id) {
         items.isBeingEdited = !items.isBeingEdited;
@@ -43,7 +45,7 @@ export class ChecklistComponent implements OnInit {
     this.http
       .patch<Company[]>(
         `http://localhost:3000/companies/${this.company.id}`,
-        list
+        co
       )
       .subscribe({
         next: () => {

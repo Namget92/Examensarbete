@@ -23,26 +23,22 @@
 
           <!-- Value -->
 
-          <!-- Before and After Edit -->
-          <div class="deleteDiv" *ngIf="!items.isBeingEdited">
-            <!-- value <= 0 -->
-            <td *ngIf="items.value">
-              {{ items.value }}€
-              <button (click)="deleteBtn(items.id)" class="delete">❌</button>
-            </td>
-            <!-- value > 0 -->
-            <td *ngIf="!items.value">
-              <button
-                (click)="editBooBtn(items.id)"
-                class="btn editBtn empty"
-                role="button"
-              >
-                Enter Value
-              </button>
-            </td>
-          </div>
+          <td class="deleteDiv" *ngIf="!items.isBeingEdited && items.value">
+            {{ items.value }}€
+            <button (click)="deleteBtn(items.id)" class="delete">❌</button>
+          </td>
 
-          <!-- During Edit-->
+          <td class="editDiv" *ngIf="!items.isBeingEdited && !items.value">
+            <button
+              (click)="editBooBtn(items.id)"
+              class="btn editBtn empty"
+              role="button"
+            >
+              Enter Value
+            </button>
+          </td>
+
+          <!-- Value During Edit-->
           <td *ngIf="items.isBeingEdited">
             <div class="editDiv">
               <form (ngSubmit)="saveEditBtn(items.id, $event.target[0].value)">

@@ -31,63 +31,23 @@
   ],
   "companies": [
     {
-      "0": {
-        "id": 1,
-        "title": "Reconciliation Differnces Status",
-        "value": 0,
-        "signedBy": "",
-        "signedDate": "",
-        "isBeingEdited": false
-      },
-      "1": {
-        "id": 2,
-        "title": "Profit And Loss Status",
-        "value": 0,
-        "signedBy": "",
-        "signedDate": "",
-        "isBeingEdited": true
-      },
-      "2": {
-        "id": 3,
-        "title": "Balance Sheet Status",
-        "value": "345",
-        "signedBy": "Erik Andersson",
-        "signedDate": "20/01/23",
-        "isBeingEdited": false
-      },
-      "3": {
-        "id": 4,
-        "title": "Cash Flow Status",
-        "value": "456",
-        "signedBy": "Erik Andersson",
-        "signedDate": "20/01/23",
-        "isBeingEdited": false
-      },
-      "4": {
-        "id": 5,
-        "title": "Notes Status",
-        "value": "567",
-        "signedBy": "Erik Andersson",
-        "signedDate": "20/01/23",
-        "isBeingEdited": false
-      },
       "id": 1,
       "name": "Volvo",
       "checklist": [
         {
           "id": 1,
           "title": "Reconciliation Differnces Status",
-          "value": 0,
-          "signedBy": "",
-          "signedDate": "",
+          "value": "2323",
+          "signedBy": "Lisa Glas",
+          "signedDate": "25/01/23",
           "isBeingEdited": false
         },
         {
           "id": 2,
           "title": "Profit And Loss Status",
-          "value": 0,
-          "signedBy": "",
-          "signedDate": "",
+          "value": "6655656",
+          "signedBy": "Erik Andersson",
+          "signedDate": "25/01/23",
           "isBeingEdited": false
         },
         {
@@ -101,21 +61,21 @@
         {
           "id": 4,
           "title": "Cash Flow Status",
-          "value": "456",
-          "signedBy": "Erik Andersson",
-          "signedDate": "20/01/23",
+          "value": "43553345",
+          "signedBy": "Lisa Glas",
+          "signedDate": "25/01/23",
           "isBeingEdited": false
         },
         {
           "id": 5,
           "title": "Notes Status",
-          "value": "567",
-          "signedBy": "Erik Andersson",
-          "signedDate": "20/01/23",
+          "value": 0,
+          "signedBy": "",
+          "signedDate": "",
           "isBeingEdited": false
         }
       ],
-      "comments": "Hej på dig!",
+      "comments": "Jag är osäker på Notes Status, dubbelkolla gärna den. // Erik",
       "commentsBeingEdited": false
     },
     {
